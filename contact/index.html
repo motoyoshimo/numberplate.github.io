@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="AMERICAN NUMBER PLATE SHOW in OKINAWA ART MUSEUM アメリカンナンバープレートショー 沖縄に上陸">
+    <title>Contact Us / AMERICAN NUMBER PLATE SHOW in OKINAWA / OKINAWA ART MUSEUM</title>
+    
+    <!--リセットcss-->
+    <link href="../css/reset.css" rel="stylesheet">
+    
+    <!--css本体-->
+    <link href="../css/style.css" rel="stylesheet">
+    
+    <!-- Googleフォント h2h3h4見出しフォントファミリー -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oleo+Script&family=Shippori+Antique&family=Shrikhand&display=swap" rel="stylesheet">
+    
+    <!--jQuery本体-->
+    <script src="../js/jquery-3.6.3.min.js"></script>
+    
+    <!-- クリッカブルマップ用jQuery -->
+    <script src="../js/jquery.rwdImageMaps.js"></script>
+    
+    <!-- slick（スライドショー） -->
+    <script src="../js/slick-1.8.1/slick/slick.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="../js/slick-1.8.1/slick/slick.css">
+    <link rel="stylesheet" type="text/css" href="../js/slick-1.8.1/slick/slick-theme.css">
+
+</head>
+
+
+<body>
+    <!-- ヘッダー -->
+    <header class="pc_header">
+        <nav>
+            <div>
+                <h1><a href="../index.html"><img src="../img/top_logo.png" alt="アメリカンナンバープレートショーロゴ" width="90" height="88"></a></h1>
+            </div>
+            <div>
+                <ul>
+                    <li><a href="../exhibit_details/index.html"><span class="nav_text_shadow">Exhibit&nbsp;Details</span><br><span class="nav_text_size">展示内容</span></a></li>
+                    <li><a href="../exhibition_outline/index.html"><span class="nav_text_shadow">Exhibition&nbsp;Outline</span><br><span class="nav_text_size">開催概要</span></a></li>
+                    <li><a href="../museum/index.html" target="_blank" rel="noopener noreferrer"><span class="nav_text_shadow">Museum&nbsp;Information</span><br><span class="nav_text_size">美術館のご案内</span></a></li>
+                    <li><a href="../contact/index.html"><span class="nav_text_shadow">Contact&nbsp;Us</span><br><span class="nav_text_size">お問い合わせ</span></a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <!-- 横幅870以下、ハンバーガーメニュー -->
+    <header class="phone_header">
+        <div>
+            <h1><a href="../index.html"><img src="../img/top_logo.png" alt="アメリカンナンバープレートショーロゴ" width="90" height="88"></a></h1>
+        </div>
+        <div class="openbtn1"><span></span><span></span><span></span></div>
+        <nav id="g-nav">
+            <div id="g-nav-list"><!--ナビの数が増えた場合縦スクロールするためのdiv※不要なら削除-->
+            <ul>
+                <li><a href="../exhibit_details/index.html">Exhibit&nbsp;Details<br>展示内容</a></li>
+                <li><a href="../exhibition_outline/index.html">Exhibition&nbsp;Outline<br>開催概要</a></li>
+                <li><a href="../museum/index.html" target="_blank" rel="noopener noreferrer">Museum&nbsp;Information<br>美術館のご案内</a></li>
+                <li><a href="../contact/index.html">Contact&nbsp;Us<br>お問い合わせ</a></li>
+                <li><a class="open_btn">Ticket<br>チケット予約</a></li>
+            </ul>
+        </div>
+        </nav>
+        <div class="circle-bg"></div>
+    </header>
+
+    <!-- メインコンテンツ -->
+    <!-- モーダルウィンドウ -->
+    <div class="overlay">
+        <div class="modal">
+            <div class="modal_content">
+                <div class="text_right"><a class="close_btn">CLOSE</a></div>
+                <div class="modal_inner_content">
+                    <div class="form_title">
+                        <div>
+                            <div><img src="../img/tic_form_title.png" alt="アメリカンナンバープレートショー" width="" height=""></div>
+                            <div>
+                                <div><p><span class="det_contentB">プレミアム</span><span>チケット予約</span></p></div>
+                                <div>
+                                    <p><span>料金</span><br>
+                                    <span>大人：</span><span>1500円/枚</span><br>
+                                    <span>大学・高校生：</span><span>800円/枚</span><br>
+                                    <span>シニア：</span><span>500円/枚</span><br>
+                                    <span>※中学生以下は、無料で</span><span>入場いただけます。</span></p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form_title_img"><img src="../img/tic_ticket_form.png" alt="プレミアムチケット" width="" height=""></div>
+                    </div>
+                    <form>      
+                        <input name="name" type="text" class="feedback-input" placeholder="Name" />   
+                        <input name="email" type="text" class="feedback-input" placeholder="Email" />
+                        <input name="tel" type="text" class="feedback-input" placeholder="Tel" />
+                        <select name="example" size="1" class="feedback-select" placeholder="大人">
+                            <option value="大人 0枚">大人 0枚</option>
+                            <option value="大人 1枚">大人 1枚</option>
+                            <option value="大人 2枚">大人 2枚</option>
+                            <option value="大人 3枚">大人 3枚</option>
+                            <option value="大人 4枚">大人 4枚</option>
+                            <option value="大人 5枚">大人 5枚</option>
+                        </select>
+                        <select name="example" size="1" class="feedback-select" placeholder="大学・高校生">
+                            <option value="大学・高校生 0枚">大学・高校生 0枚</option>
+                            <option value="大学・高校生 1枚">大学・高校生 1枚</option>
+                            <option value="大学・高校生 2枚">大学・高校生 2枚</option>
+                            <option value="大学・高校生 3枚">大学・高校生 3枚</option>
+                            <option value="大学・高校生 4枚">大学・高校生 4枚</option>
+                            <option value="大学・高校生 5枚">大学・高校生 5枚</option>
+                        </select>
+                        <select name="example" size="1" class="feedback-select" placeholder="シニア">
+                            <option value="シニア 0枚">シニア 0枚</option>
+                            <option value="シニア 1枚">シニア 1枚</option>
+                            <option value="シニア 2枚">シニア 2枚</option>
+                            <option value="シニア 3枚">シニア 3枚</option>
+                            <option value="シニア 4枚">シニア 4枚</option>
+                            <option value="シニア 5枚">シニア 5枚</option>
+                        </select>
+                        <input type="submit" value="SUBMIT"/>
+                      
+                    </form>
+                </div>
+                <!-- <div class="text_right"><a class="close_btn">CLOSE</a></div> -->
+            </div>
+        </div>
+    </div>
+    <!-- ----------------------------------------追記ここから--------------------------------------- -->
+    <main>
+
+        
+        
+        <div class="con_mainimg">
+            <img src="../img/con_main.png" alt="ロボットの画像" width="" height="">
+        </div>
+
+
+
+        
+        <div class="con_content_ttl">
+            <div class="con_img01">
+                <img src="../img/con_img02.png" alt="車のイラスト" width="452" height="35">
+            </div>
+            <div class="con_officettl">
+               <h3>Contact</h3>
+            </div>
+            <div class="con_img02">
+                <img src="../img/con_img02.png" alt="車のイラスト" width="452" height="35">
+            </div>
+        </div>
+
+   
+        
+        <form>      
+            <input name="name" type="text" class="feedback-input" placeholder="Name" />   
+            <input name="email" type="text" class="feedback-input" placeholder="Email" />
+            <textarea name="text" class="feedback-input" placeholder="Comment"></textarea>
+            <input type="submit" value="SUBMIT"/>
+          
+        </form>
+
+
+        <div class="con_content_ttl">
+            <div class="con_img01">
+                <img src="../img/con_img02.png" alt="車のイラスト" width="452" height="35">
+            </div>
+            <div class="con_officettl">
+               <h3>Office</h3>
+            </div>
+            <div class="con_img02">
+                <img src="../img/con_img02.png" alt="車のイラスト" width="452" height="35">
+            </div>
+
+        </div>
+
+
+        <div class="con_content_wrap">
+            <div class="con_wrap_img">
+                <img src="../img/con_img04.png">
+            </div>
+            <div class="con_wrap_text">
+                <h3>Blue  star  cars</h3>
+                <p>〒000-0000</p>
+                <p>東京都☓☓☓☓☓☓☓☓☓☓☓☓☓☓☓</p>
+                <p>TEL : 000-000-0000</p>
+                <p>MAIL : info@bluestarcars.com</p>
+                <p>MONDAY-FLYDAY  10:00-18:00</p>
+            </div>
+        </div>
+
+
+
+    </main>
+    <!-- ----------------------------------------追記ここまで--------------------------------------- -->
+
+    <!-- フッター -->
+    <!-- チケット予約ボタン 削除しないでね！ ココから -->
+    <a class="ticket open_btn"><img src="../img/tic_ticket.png" alt="入場チケット予約" width="113" height="50"><p>入場チケット予約</p></a>
+    <!-- チケット予約ボタン ココまで -->
+
+    <!-- ページトップボタン 削除しないでね！ ココから-->
+    <a class="pagetop" href="#"><img src="../img/top_arrow.png" alt="ページトップ"><p>TOP</p></a>
+    <!-- ページトップボタン ココまで -->
+    <footer>
+        <p>&copy;2023&nbsp;BLUE&nbsp;STAR&nbsp;CARS<br><a href="https://jp.freepik.com/free-vector/usa-license-plate-set_8610451.htm">著作者：pch.vector</a></p>
+    </footer>
+
+    <!-- javascript -->
+    <script>
+        //追加のスクリプト(jQuery等)は、ここに追記してくださいね。
+        //------------------追記ここから-------------------------
+
+        //ハンバーガーメニュー
+        $(".openbtn1").click(function () {//ボタンがクリックされたら
+        $(this).toggleClass('active');//ボタン自身に activeクラスを付与し
+            $("#g-nav").toggleClass('panelactive');//ナビゲーションにpanelactiveクラスを付与
+            $(".circle-bg").toggleClass('circleactive');//丸背景にcircleactiveクラスを付与
+        });
+                //ハンバーガーメニュー
+        $("#g-nav a").click(function () {//ナビゲーションのリンクがクリックされたら
+            $(".openbtn1").removeClass('active');//ボタンの activeクラスを除去し
+            $("#g-nav").removeClass('panelactive');//ナビゲーションのpanelactiveクラスを除去
+            $(".circle-bg").removeClass('circleactive');//丸背景のcircleactiveクラスを除去
+        });
+                
+        //アコーディオンをクリックした時の動作
+        $('.ter_title').on('click', function() {//タイトル要素をクリックしたら
+        var findElm = $(this).next(".ter_box");//直後のアコーディオンを行うエリアを取得し
+        $(findElm).slideToggle();//アコーディオンの上下動作
+            
+        if($(this).hasClass('close')){//タイトル要素にクラス名closeがあれば
+            $(this).removeClass('close');//クラス名を除去し
+        }else{//それ以外は
+            $(this).addClass('close');//クラス名closeを付与
+        }
+        });
+
+        //------------------追記ここまで-------------------------
+    </script>
+
+
+    <!-- //-------------消すな!!ここから----------------// -->
+    <script>
+        // モーダルウィンドウの設定
+        $(function () {
+            $('.open_btn').click(function () {
+                $("body").addClass("no_scroll"); // 背景固定させるクラス付与
+                $('.overlay').fadeIn().css('display','flex'); // 初期値blockではなくflexになるようにする
+            });
+            $('.close_btn').click(function () {
+                $("body").removeClass("no_scroll"); // 背景固定させるクラス削除
+                $('.overlay').fadeOut();
+            });
+        });
+
+        // slick(スライダー)
+        $(".slick_a").slick({
+            accessibility:false,
+            autoplay:true,
+            autoplaySpeed:5000,
+            speed:2000,
+            slidesToShow:3,
+            centerMode:true,
+            arrows:false,
+            pauseOnHover:false,
+            focusOnSelect:true
+        });
+
+        //チケット予約ボタン
+        $(function () {
+        var $pageTop = $(".ticket")
+        $pageTop.hide();
+        $(window).scroll(function () {
+            if ($(this).scrollTop() > 50) {  //50pxスクロールしたら表示
+                $pageTop.fadeIn();
+            } else {
+                $pageTop.fadeOut();
+            }
+            })                  
+        });
+
+        //トップページボタンの表示開始設定
+        $(function () {
+        var $pageTop = $(".pagetop")
+        $pageTop.hide();
+        $(window).scroll(function () {
+            if ($(this).scrollTop() > 500) {  //500pxスクロールしたら表示
+                $pageTop.fadeIn();
+            } else {
+                $pageTop.fadeOut();
+            }
+            })                  
+        });
+
+        //トップページボタンの表示位置調整（フッターと重なるとき）
+        $(window).scroll(function () {
+            scrollHeight = $(document).height();  
+                scrollPosition = $(window).height() + $(window).scrollTop();  
+                footHeight = $("footer").innerHeight(); 
+                if ( scrollHeight - scrollPosition  <= footHeight ) { 
+                    $(".pagetop").css({
+                        "bottom": footHeight + 20 //footerの高さにボタンがかかる時はfooterの高さ+20px上にあげる
+                    });
+                } else { 
+                    $(".pagetop").css({
+                        "position":"fixed",
+                        "bottom":"30px" //footerの高さにボタンがかからない時は下から30pxの位置に固定する
+                    });
+                }
+        });
+
+        //クリッカブルマップのレスポンシブ対応
+        $( 'img[usemap]' ).rwdImageMaps();
+
+        //クリッカブルマップのホバー(ブラウザー依存のため動作しないこともある)
+        $(function(){
+            $('area').hover(
+            // function() { $(this).focus(); },
+            // function() { $(this).blur(); }
+            function() { $(this).focus('outline','10px solid #f25c78'); },
+            function() { $(this).blur('outline','none'); }
+            )
+        });
+    </script>
+    <!-- //-------------消すな!!ここまで----------------// -->
+</body>
+</html>

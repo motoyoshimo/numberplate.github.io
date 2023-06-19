@@ -1,0 +1,2014 @@
+@charset "utf-8";
+/* CSS Document */
+*{word-break:break-all;}
+
+
+/* ページ内遷移のスムーススクロール */
+html{
+  scroll-behavior:smooth;
+  scroll-padding-top:150px;
+}
+
+
+/* ボディー基本設定 */
+body{
+    color:#333;
+    background-color:#a6d9ed;
+}
+
+a{
+    text-decoration:none;
+    color:#333;
+}
+
+a:hover{
+    color:#888;
+}
+
+
+/*見出し*/
+h1{
+    /*ヘッダーのlogoを囲むとき使用します*/
+    font-size:1px;
+}
+
+h2{
+    /* 下記は、見出し用フォントファミリー */
+    font-family: 'Shrikhand', cursive;
+    font-size:46px;
+    line-height:170%;
+}
+
+h3{
+    /* 下記は、見出し用フォントファミリー */
+    font-family: 'Oleo Script', cursive;
+    font-size:38px;
+    line-height:170%;
+}
+
+h4{
+    /* 下記は、見出し用フォントファミリー */
+    font-family: 'Oleo Script', cursive;
+    font-size:26px;
+    line-height:170%;
+}
+
+p{
+    /* 下記は、本文用フォントファミリー */
+    font-family: 'Shippori Antique', sans-serif;
+    font-size:18px;
+    line-height:170%;
+}
+
+
+/* 画像全指定（ボックスが縮んだら画像も縮小） */
+img{
+    max-width:100%;
+    height:auto;
+}
+
+
+/* 動画全指定（ボックスが縮んだら動画も縮小） */
+video{
+    max-width:100%;
+    height:auto;
+}
+
+/* チケット予約ボタン ここから */
+.ticket{
+    width:113px;
+    height:75px;
+    position:fixed;
+    top:200px;
+    right:0px;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    z-index:9000;
+}
+
+.ticket img{
+    box-shadow:0 4px 6px rgb(0 0 0 / 30%);
+    border-radius:5px;
+}
+
+.ticket img:hover{
+    box-shadow:none;
+}
+
+.ticket p{
+    color:#fff;
+    font-size:12px;
+    text-shadow:1px 1px 1px #888;
+}
+/* チケット予約ボタン ここまで */
+
+/* ページトップボタン ここから */
+/* 親要素 */
+.pagetop{
+    width:75px;
+    height:75px;
+    position:fixed;
+    right:30px;
+    bottom:30px;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    z-index:20;
+}
+/* 子要素 */
+.pagetop img{
+    width:52px;
+    height:52px;
+    transform:rotate(30deg);
+    box-shadow:0 4px 6px rgb(0 0 0 / 30%);
+    box-sizing:content-box;
+    border:5px solid #f25c78;
+    border-radius:50%;
+}
+
+.pagetop img:hover{
+    box-shadow:none;
+}
+
+.pagetop p{
+    color:#fff;
+    font-size:12px;
+    text-shadow:1px 1px 1px #888;
+}
+/* ページトップボタン ここまで */
+
+/****************
+pc用ヘッダー  
+クラス名を付け足しました。
+内容は変わっていません。
+ ****************/
+
+ @media screen and (min-width:871px){
+    /* ヘッダー */
+    .phone_header{display:none;}
+    .pc_header{
+        width:100%;
+        height:100px;
+        padding:10px 30px;
+        display:flex;
+        justify-content:space-between;
+        overflow:hidden;/*余分な余白を削除*/
+        position:fixed;
+        z-index:10000;
+        background-color:#a6d9edcc;
+    }
+    
+    .pc_header nav{
+        width:100%;
+        display:flex;
+        justify-content:space-between;
+    }
+    
+    .pc_header nav{
+        display:flex;
+        align-items:end;
+    }
+    
+    .pc_header nav ul{
+        display:flex;
+        list-style-type:none;   
+    }
+    
+    .pc_header nav ul li{
+        text-align:center;
+    }
+    
+    .pc_header .nav_text_shadow{ 
+        color:#f25c78;
+        font-size:18px;
+        font-family:Impact;
+        font-weight:bold;
+        text-shadow:2px 1px 0 #fff;
+    }
+    
+    .pc_header .nav_text_size{
+        color:#fff;
+        font-size:12px;
+    }
+    
+    .pc_header nav a{
+        display:inline-block;
+        padding:1px 5px;
+    }
+    
+    /* .pc_header nav a:hover:not(nav h1 a){
+        background-color:#fff6;
+        text-decoration:underline;
+    } */
+    .pc_header .nav_text_shadow:hover:not(nav h1 a){
+        color:#1847b5;
+    }
+    /* nav li:not(.gn_1){
+        margin:0 0 0 35px;
+    } */
+    /* こちらの記述でも指定可能（何番目の指定） */
+    .pc_header nav li:not(:nth-of-type(1)) {margin:0 0 0 35px;}
+}
+    
+    /***********************/
+    /* pc用ヘッダーここまで */
+    /**********************/
+
+
+/* ヘッダー */
+
+
+
+/* メイン */
+main{
+    width:100%;
+    overflow:hidden;/*余分な余白を削除*/
+}
+
+article{
+    overflow:hidden;/*余分な余白を削除*/
+}
+
+section{
+    overflow:hidden;/*余分な余白を削除*/
+}
+
+div{
+    overflow:hidden;/*余分な余白を削除*/
+}
+
+
+/* フッター */
+footer{
+    width:100%;
+    background-color:#1847b5;
+    overflow:hidden;/*余分な余白を削除*/
+}
+footer p{
+    color:#ccc;
+    font-size:12px;
+    /* font-weight:bold; */
+    text-align:center;
+    padding:20px 0;
+}
+
+/* 山本追加 */
+footer div{
+    text-align:center;
+    padding:20px 0 0 0;
+}
+footer div a{
+    color:#ccc;
+}
+/* 山本追加ここまで */
+
+
+/* チェック用ボーダー ここから */
+/* サイト全体用 */
+/* header, nav, main, article, section, div, footer, h1, h2, h3, h4, p{
+    border:1px solid red;
+} */
+/* 個別用 */
+.box_check{border:1px solid red;}
+/* チェック用ボーダー ここまで */
+
+/* カラー設定（下記の指定になっています） */
+/* ベースカラー：#a6d9ed */
+/* メインカラー：#1847b5 */
+/* アクセントカラー：レッド：#ff0a0a , ピンク：#f25c78 */
+/* ベースフォントカラー：#333 */
+
+
+
+/* ネーミングルールは守ること！！ */
+/* 小林が気になって追記したもの */
+/* TOPページ分 */
+.top_title{
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+}
+
+/* モーダルウィンドウ用 ココから */
+.overlay {
+    position: fixed;
+    inset: 0;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    z-index:10001;
+    background-color: #000a;
+}
+
+.modal {
+    width:70%;
+    height:70%;
+    padding:30px;
+    background-image: url(../img/top_blackwhite.png);
+    overflow:scroll;
+    /* スクロール設定 */
+}
+
+.modal_content {
+    padding:10px;
+    min-height:600px;
+    background-color:#a6d9ed;
+}
+.modal_content form{
+    margin:0;
+}
+
+.modal_inner_content{
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+}
+
+.text_right {
+    text-align:right;
+}
+
+/* モーダル表示中バックグラウンドのコンテンツをスクロールさせない */
+.no_scroll {
+    overflow:hidden;
+}
+
+.close_btn{
+    display: inline-block;
+    text-align: center;
+    width: 50px;
+    height: 50px;
+    line-height:50px;
+    background-color:#1847b5;
+    border-radius:50%;
+    color:#ddd;
+    font-size:12px;
+}
+.close_btn:hover{
+    color:#666;
+}
+
+.form_title{
+    display:flex;
+    justify-content:center;
+}
+
+.form_title_img{
+    display: flex;
+    /* justify-content:center; */
+    align-items:end;
+}
+
+.form_title p{
+    color:#fff;
+    line-height:110%;
+}
+
+.form_title span{
+    display:inline-block;
+    color: #fff;
+    font-size:12px;
+}
+/* モーダルウィンドウ用 ココまで */
+
+/* ----------ここから追記---------------------------------------------------------------------------- */
+
+/******************************/
+/* ハンバーガーメニューここから */
+/*****************************/
+@media screen and (max-width:870px){
+    .pc_header{display:none;}
+    .phone_header{
+        display:block;
+        width:100%;
+        height:100px;
+        padding:1.15% 3.45%;
+        display:flex;
+        justify-content:space-between;
+        overflow:hidden;/*余分な余白を削除*/
+        position:fixed;
+        z-index:10000;
+        background-color:#a6d9edcc;
+        align-items:center;
+    }
+    /*アクティブになったエリア*/
+#g-nav.panelactive{
+    /*position:fixed;にし、z-indexの数値を大きくして前面へ*/
+    position:fixed;
+    z-index: 999;
+    top: 0;
+    width:100%;
+    height: 100vh;
+}
+
+/*丸の拡大*/
+.circle-bg{
+    position: fixed;
+  z-index:3;
+    /*丸の形*/
+    width: 11.49%;
+    height: 11.49%;
+    border-radius: 50%;
+    background: #a6d9ed;
+    /*丸のスタート位置と形状*/
+  transform: scale(0);/*scaleをはじめは0に*/
+  right:-5.75%;
+    top:-5.75%;
+    transition: all .6s;/*0.6秒かけてアニメーション*/
+}
+
+.circle-bg.circleactive{
+  transform: scale(50);/*クラスが付与されたらscaleを拡大*/
+}
+
+/*ナビゲーションの縦スクロール*/
+#g-nav-list{
+    display: none;/*はじめは表示なし*/
+    /*ナビの数が増えた場合縦スクロール*/
+    position: fixed;
+    z-index: 999; 
+    width: 100%;
+    height: 100vh;
+    overflow: auto;
+    -webkit-overflow-scrolling: touch;
+}
+
+#g-nav.panelactive #g-nav-list{
+     display: block; /*クラスが付与されたら出現*/
+}
+
+/*ナビゲーション*/
+#g-nav ul {
+    opacity: 0;/*はじめは透過0*/
+    /*ナビゲーション天地中央揃え※レイアウトによって調整してください。不必要なら削除*/
+    position: absolute;
+    z-index: 999;
+    top:50%;
+    left:45%;
+    transform: translate(-50%,-50%);
+}
+
+/*背景が出現後にナビゲーションを表示*/
+#g-nav.panelactive ul {
+    opacity:1;
+}
+
+/* 背景が出現後にナビゲーション li を表示※レイアウトによって調整してください。不必要なら削除*/
+#g-nav.panelactive ul li{
+animation-name:gnaviAnime;
+animation-duration:1s;
+animation-delay:.2s;/*0.2 秒遅らせて出現*/
+animation-fill-mode:forwards;
+opacity:0;
+}
+@keyframes gnaviAnime{
+0% {
+opacity: 0;
+}
+100% {
+opacity: 1;
+}
+}
+
+
+/*リストのレイアウト設定*/
+#g-nav li{
+  text-align: center; 
+  list-style: none;
+}
+
+#g-nav li a{
+  color: #333;
+  text-decoration: none;
+  padding:10px;
+  display: block;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  font-weight: bold;
+}
+#g-nav li a:hover{
+    text-decoration:none;
+    color:#888;
+}
+
+
+/*========= ボタンのためのCSS ===============*/
+.openbtn1{
+  position:fixed;
+  top:10px;
+  right: 10px;
+  z-index: 9999;/*ボタンを最前面に*/
+  cursor: pointer;
+    width: 50px;
+    height:50px;
+}
+  
+/*×に変化*/  
+.openbtn1 span{
+    display: inline-block;
+    transition: all .4s;
+    position: absolute;
+    left: 14px;
+    height: 5px;
+  background-color: #f25c78;
+    width: 70%;
+  }
+
+.openbtn1 span:nth-of-type(1) {
+  top:20px; 
+}
+
+.openbtn1 span:nth-of-type(2) {
+  top:30px;
+}
+
+.openbtn1 span:nth-of-type(3) {
+  top:40px;
+}
+
+.openbtn1.active span:nth-of-type(1) {
+    top: 18px;
+    left: 18px;
+    transform: translateY(6px) rotate(-45deg);
+    width: 30%;
+}
+
+.openbtn1.active span:nth-of-type(2) {
+  opacity: 0;
+}
+
+.openbtn1.active span:nth-of-type(3){
+    top: 30px;
+    left: 18px;
+    transform: translateY(-6px) rotate(45deg);
+    width: 30%;
+}
+}
+/* ハンバーガーメニューここまで */
+
+
+/* 山本さん用 -----------------------------------------------------------------------------------*/
+.top_main_visual_size img{
+    width:100%;
+}
+/* キャッチコピー部分 */
+.top_catchcopy{margin:30px 0 60px 0;}
+.top_catchcopy .top_pc_catchcopy{
+    display:block;
+    color:#fff;
+    text-align:center;
+}
+.top_catchcopy .top_phone_catchcopy{
+    display:none;
+}
+.top_pc_catchcopy_p{
+    display:block;
+    color:#fff;
+    text-align:center;
+}
+.top_phone_catchcopy_p{
+    display:none;
+}
+.top_threephotos{
+    background-image:url(../img/top_blackwhite.png);
+    background-repeat:repeat-y;
+    background-size:100%;
+    background-position:center;
+    background-attachment:fixed;
+    margin:0 0 60px 0;
+    height:auto;
+}
+.top_threephotos{
+    text-align:center;
+}
+.top_threephotos img{
+    margin:77px 33px 77px 0;
+}
+
+/* 展示内容 */
+
+.top_ExhibitDetails .top_title{
+    margin-bottom:30px;
+}
+.top_ExhibitDetails .top_title h3{
+    text-shadow:3px 3px 0 #1847b5;
+    text-align:center;
+}
+.top_ExhibitDetails .top_title p{text-align:center;}
+
+.top_ExhibitDetails .top_title a:link{text-decoration:none; color:#fff;}
+.top_ExhibitDetails .top_title a:visited{text-decoration:none; color:#fff;}
+.top_ExhibitDetails .top_title a:hover{text-decoration:none; color:#888;}
+.top_ExhibitDetails .top_title a:active{text-decoration:none; color:#888;}
+
+.top_ExhibitDetails .top_box1{
+    display:flex;
+    justify-content:center;
+    margin-bottom:47px;
+    position:relative;
+}
+/* ここ先生に聞く。左右のナンバーにマージンをかけると文字が動く。なにか方法はありませんか。 */
+.top_ExhibitDetails .top_box1 .top_pbox2{
+    display:block;
+    position:relative;
+    justify-content:center;
+}
+.top_ExhibitDetails .top_box1 .top_pbox2 p{
+    display:block;
+    color:#fff;
+    text-align:center;
+}
+.top_ExhibitDetails .top_box1 .top_phone_pbox2{
+    display:none;
+}
+.top_ExhibitDetails .top_box1 .top_phone_pbox2 p{
+    display:none;
+}
+.top_ExhibitDetails .top_box1 .top_left{
+    width:190px;
+    height:108px;
+    margin:120px 17px 0 0;
+}
+.top_ExhibitDetails .top_box1 .top_right{
+    width:169px;
+    height:130px;
+    margin:50px 36px 17px 0;
+}
+.top_ExhibitDetails .top_btn{
+    margin:0 auto;
+    margin-bottom:85px;
+    position:relative;
+    width:228px;
+    height:73px;
+    overflow:hidden;
+    background:#000;
+}
+.top_ExhibitDetails .top_btn img{
+    width: 100%;
+    cursor: pointer;
+    transition-duration: 0.1s;
+}
+.top_ExhibitDetails .top_btn:hover img{
+    opacity: 0.6;
+    transition-duration: 0.1s;
+}
+
+/* 開催概要 */
+.top_ExhibitionOutline{
+    position:relative;
+    margin-bottom:40px;
+}
+.top_ExhibitionOutline .top_title2{
+    background-image:url(../img/top_yashinoki_ue.png);
+    background-repeat:no-repeat;
+    background-position-x:16%;
+}
+.top_ExhibitionOutline .top_title2 h3{
+    text-shadow:3px 3px 0 #1847b5;
+    text-align:center;
+}
+.top_ExhibitionOutline .top_title2 p{
+    text-align:center;
+}
+
+.top_ExhibitionOutline .top_title2 a:link{text-decoration:none; color:#fff;}
+.top_ExhibitionOutline .top_title2 a:visited{text-decoration:none; color:#fff;}
+.top_ExhibitionOutline .top_title2 a:hover{text-decoration:none; color:#888;}
+.top_ExhibitionOutline .top_title2 a:active{text-decoration:none; color:#888;}
+
+.top_ExhibitionOutline .top_title2 .top_skybluecar1{
+    position:absolute;
+    z-index:20;
+    width:375px;
+    height:206px;
+    margin-left:850px;
+}
+/* 一部だけ黒が濃くなるのなんで */
+.top_outline_btnbox4{
+    text-align:center;
+    margin:20px 0 0 0;
+}
+.top_ExhibitionOutline .top_title2 .top_btn2{
+    width:262px;
+    height:73px;
+    overflow:hidden;
+}
+.top_ExhibitionOutline .top_title2 .top_btn2 img{
+    width:262px;
+    height:73px;
+    cursor: pointer;
+    transition-duration: 0.1s;
+}
+.top_ExhibitionOutline .top_title2 .top_btn2:hover img{
+    opacity: 0.6;
+    transition-duration: 0.1s;
+}
+/* 黒ここまで */
+/* CHECKボタン乗せたい */
+.top_ExhibitionOutline .top_title2 .top_borderbox{
+    position:relative;
+    z-index:10;
+    width:870px;
+    height:auto;
+    margin:0 auto;
+    margin-top:180px;
+}
+.top_ExhibitionOutline .top_title2 .top_borderbox p{
+    position:relative;
+    text-align:center;
+    color:#333;
+    background-color:#fff;
+    border:5px solid #1847b5;
+    padding:60px;
+}
+.top_ExhibitionOutline .top_title2 .top_borderbox span{
+    color:#1847b5;
+}
+
+/* 美術館案内 */
+.top_MuseumInformation .top_title3, .top_ContactUs .top_title4{
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    
+    /* 山本追記 */
+    margin-bottom:40px;
+}
+
+.top_MuseumInformation .top_title3 h3{
+    text-shadow:3px 3px 0 #1847b5;
+    text-align:center;
+}
+.top_MuseumInformation .top_title3 p{text-align:center;}
+.top_MuseumInformation .top_title3 a:link{text-decoration:none; color:#fff;}
+.top_MuseumInformation .top_title3 a:visited{text-decoration:none; color:#fff;}
+.top_MuseumInformation .top_title3 a:hover{text-decoration:none; color:#888;}
+.top_MuseumInformation .top_title3 a:active{text-decoration:none; color:#888;}
+
+.top_MuseumInformation .top_box3{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    margin:0 0 50px 0;
+    position:relative;
+    height:370px;;
+}
+.top_MuseumInformation .top_box3 .top_musephoto{
+    margin:0 31px 0 0;
+    position:relative;
+}
+.top_MuseumInformation .top_box3 .top_skybluecar3{
+    position:absolute;
+    z-index:10;
+    margin: 200px 900px 0 0;
+}
+.top_MuseumInformation .top_box3 .top_btn3{
+    width:376px;
+    height:73px;
+    overflow:hidden;
+    background:#000;
+}
+.top_MuseumInformation .top_box3 .top_btn3 img{
+    width: 100%;
+    cursor: pointer;
+    transition-duration: 0.1s;
+}
+.top_MuseumInformation .top_box3 .top_btn3:hover img{
+    opacity: 0.6;
+    transition-duration: 0.1s;
+}
+
+/* お問い合わせ */
+.top_ContactUs{
+    background-image:url(../img/top_yashinoki_shita.png);
+    background-position-x:85%;
+    background-repeat:no-repeat;
+    height:320px;
+}
+.top_ContactUs .top_title4 h3{
+    text-shadow:3px 3px 0 #1847b5;
+    text-align:center;
+}
+.top_ContactUs .top_title4 p{text-align:center;}
+
+.top_ContactUs .top_title4 a:link{text-decoration:none; color:#fff;}
+.top_ContactUs .top_title4 a:visited{text-decoration:none; color:#fff;}
+.top_ContactUs .top_title4 a:hover{text-decoration:none; color:#888;}
+.top_ContactUs .top_title4 a:active{text-decoration:none; color:#888;}
+
+.top_ContactUs .top_btn4{
+    margin:0 auto;
+    width:376px;
+    height:73px;
+    overflow:hidden;
+    background:#000;
+}
+.top_ContactUs .top_btn4 img{
+    width: 100%;
+    cursor: pointer;
+    transition-duration: 0.1s;
+}
+.top_ContactUs .top_btn4:hover img{
+    opacity: 0.6;
+    transition-duration: 0.1s;
+}
+
+
+/*******************/
+/* ご利用規約ページ */
+/******************/
+
+/*==================================================
+アコーディオンのためのcss
+===================================*/
+
+/*アコーディオン全体*/
+.ter_accordion-area{
+    list-style: none;
+    width: 96%;
+    max-width: 900px;
+    margin:0 auto;
+    margin-top:200px;
+}
+
+.ter_accordion-area li{
+    margin: 10px 0;
+}
+
+.ter_accordion-area section {
+  border: 1px solid #ccc;
+  background-color: #fff;
+}
+
+/*アコーディオンタイトル*/
+.ter_title {
+    position: relative;/*+マークの位置基準とするためrelative指定*/
+    cursor: pointer;
+    font-size:1rem;
+    font-weight: normal;
+    padding: 3% 3% 3% 50px;
+    transition: all .5s ease;
+}
+
+/*アイコンの＋と×*/
+.ter_title::before,
+.ter_title::after{
+    position: absolute;
+    content:'';
+    width: 15px;
+    height: 2px;
+    background-color: #333;
+    
+}
+.ter_title::before{
+    top:48%;
+    left: 15px;
+    transform: rotate(0deg);
+    
+}
+.ter_title::after{    
+    top:48%;
+    left: 15px;
+    transform: rotate(90deg);
+
+}
+/*　closeというクラスがついたら形状変化　*/
+.ter_title.close::before{
+  transform: rotate(45deg);
+}
+
+.ter_title.close::after{
+  transform: rotate(-45deg);
+}
+
+/*アコーディオンで現れるエリア*/
+.ter_box {
+    display: none;/*はじめは非表示*/
+    background: #f3f3f3;
+  margin:0 3% 3% 3%;
+    padding: 3%;
+}
+
+/* 山本コーディング　ここまで---------------------------------------------------------------------- */
+
+
+/* 赤羽さん用 -----------------------------------------------------------------------------------*/
+.out_text_shadow{ 
+    color:#ffffff;
+    font-size:46px;
+    font-family:Impact;
+    font-weight:bold;
+    text-shadow:2px 1px 0 #1847b5;
+}
+
+.out_text_size{
+    color:#fff;
+    font-size:12px;
+}
+
+.out_ img{
+    width:100%;    
+}
+
+.out_h3 h3{
+    margin: 100px 100px 20px 100px;
+    color: #fff;
+    text-shadow:3px 3px 0 #1847b5;
+    text-align:center;
+}
+
+.out_h3 p{
+    color: #fff;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.out_box{
+    margin: 0 auto;
+    width: 1200px;
+}
+
+.out_box1{
+    display: flex;
+    justify-content: space-around;
+    margin: 50px 0 50px 0;
+}
+
+.out_img1{
+    margin: 100px;
+}
+
+.out_img2{
+    margin: 100px;
+}
+
+.out_textbox{
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    /* margin: 50px 0 200px 0; */
+}
+
+.out_textboxA{
+    margin :0 0 200px 0;
+}
+
+.out_margin p{
+    margin-left: 108px;
+}
+
+
+
+/* ------------------------------------------------------- */
+.det_text_shadow{ 
+    color:#ffffff;
+    font-size:50px;
+    font-family:Impact;
+    font-weight:bold;
+    text-shadow:2px 1px 0 #1847b5;
+}
+
+.det_text_size{
+    color:#fff;
+    font-size:12px;
+}
+
+.det_img1 img{ width: 100%;}
+
+
+.det_h3box{
+    text-align: center;
+    margin-bottom: 20px;
+    }
+
+.det_h3box h3{     margin: 100px 100px 20px 100px;
+    color: #fff;
+    text-shadow:3px 3px 0 #1847b5;
+    text-align:center;
+}
+
+.det_h3box p{
+    color: #fff;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.det_text1{
+    text-align: center;
+    background-color: #fff;
+    padding: 100px;
+    margin: 100px;
+    font-size: 30px;
+    border:10px solid #1847b5;
+}
+
+.det_map{
+    text-align: center;
+    padding-bottom: 100px;
+}
+
+.det_content{
+    text-align: center;
+    padding: 50px;
+}
+
+.det_content_img1{
+position: relative;
+margin-bottom: 50px;}
+
+.det_content_text1{
+    color: #fff;
+
+    position: absolute;
+    top:30%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+}
+
+.det_content_text2{
+    color: #fff;
+    font-size: 30;
+
+    position: absolute;
+    top: 60%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+}
+
+.det_content_text3{
+
+    color: #fff;
+
+    position: absolute;
+    top: 90%;
+    left: 53%;
+    transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    white-space: nowrap
+}
+
+
+.det_contentA{
+    display:inline-block;
+    font-size:50px;
+    font-weight:bold;
+}
+
+.det_contentB{
+    display:inline-block;
+    font-size:30px;
+    font-weight:bold;
+}
+
+.det_content_img2{
+    position: relative;
+    margin-bottom: 50px;}
+
+    .det_content_img3{
+        position: relative;
+        margin-bottom: 50px;}
+
+        .det_content_img4{
+            position: relative;
+            margin-bottom: 50px;}
+
+            .det_content_img5{
+                position: relative;
+                margin-bottom: 50px;}
+
+                .det_content_img6{
+                    position: relative;
+                    margin-bottom: 50px;}
+
+/* 本吉さん用 -----------------------------------------------------------------------------------*/
+/* --------------------------------------- 美術館案内ページ-------------------------------------- */
+
+
+
+
+.mus_wrapper{
+    background-color: #fff;
+}
+
+
+
+.mus_top{
+    width: 100%;
+    vertical-align: top;
+    text-align: center;
+    
+     
+    
+}
+.mus_wrapper{
+    /* border: 5px solid rgb(218, 32, 141); */
+    width: 100%;
+    margin: auto;
+   
+}
+
+.mus_logo{
+    /* border: 5px solid goldenrod; */
+    /* margin-bottom: -200px; */
+    position: absolute;
+
+   
+}
+
+
+.mus_main{
+   /* border: 5px solid rgb(218, 72, 32); */
+   padding-top: 50px;
+   background-color: #fff;
+  
+
+   
+}
+
+
+
+.mus_en{
+    /* border: 5px solid darkgoldenrod; */
+    background-image: url(../img/mus_side.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    height: 120px;
+    /* margin-top: -100px; */
+    /* position: relative; */
+    
+}
+
+
+.mus_main_wrap{
+    /* border: 1px solid gold; */
+    width: 100%;
+    display: flex;
+    padding-left: 110px;
+    margin-top: -100px;
+    justify-content: center;
+    padding-bottom: 30px;
+    /* position: relative; */
+
+}
+
+.mus_main_wrap .mus_text {
+    margin: 60px 0 0 60px;
+    /* position: relative; */
+  
+  
+}
+.mus_main_wrap .mus_text p{
+   line-height: 50px;
+  
+}
+
+
+
+.mus_main_wrap .mus_message .mus_ttl01{
+    margin-bottom: 100px;
+}
+
+/* .mus_main_wrap .mus_btn img{
+    margin:230px 0 0 10px;
+} */
+
+.mus_btn {
+    /* border-radius: 5px; */
+    /* -webkit-box-sizing: border-box; */
+    /* -moz-box-sizing: border-box; */
+    height:140px;
+    margin-top:180px;
+    box-sizing: border-box;
+    transition: 0.7s;
+}
+  
+
+
+/* マウスオーバー時 */
+.mus_btn:hover{
+      box-shadow: 0 4px 3px 0 rgba(255, 255, 255, 0.5);
+      transform: translateY(-20px);
+      cursor: pointer;
+    }
+
+
+
+.mus_line{
+    width: 100%;
+    margin: auto;
+    text-align: center;
+    padding: 60px 0 70px 0;
+    /* position: relative; */
+}
+.mus_contents_wrap{
+    display: flex;
+    justify-content: space-around;
+    /* position: relative; */
+}
+
+
+
+.mus_ttl{
+    margin :-100px 0 100px 110px;
+}
+
+.mus_contents02_wrap{
+    /* border: 1px solid forestgreen; */
+    justify-content: center;
+    display: flex;
+    padding-top: 10px;
+    padding-bottom: 100px;
+}
+.mus_contents02_wrap .mus_contents02_wrap01 img{
+    padding-bottom: 50px;
+   
+}
+.mus_contents02_wrap .mus_contents02_wrap01 p{
+    line-height: 30px;
+}
+
+.mus_contents02_wrap .mus_contents02_wrap02{
+    margin-top: 80px;
+    margin-left: 30px;
+}
+
+.mus_contents02_wrap .mus_contents02_wrap02 p{
+    padding-top: 30px;
+    line-height: 30px;
+
+}
+
+.mus_icon {
+    display: flex;
+    justify-content: center;
+    margin-top: 100px;
+    margin-bottom: 50px;
+  
+}
+.mus_icon img{
+    /* border: 1px solid gold; */
+    margin-left:10px;
+    margin-right: 10px;
+    
+}
+
+
+
+
+
+@import url(https://fonts.googleapis.com/css?family=Montserrat:400,700);
+
+
+form { max-width:600px;  margin:50px auto;}
+
+.feedback-input {
+  color:rgb(9, 9, 9);
+  font-family: Helvetica, Arial, sans-serif;
+  font-weight:500;
+  font-size: 18px;
+  border-radius: 5px;
+  line-height: 22px;
+  background-color: transparent;
+  border:2px solid #0a0a0a;
+  transition: all 0.3s;
+  padding: 13px;
+  margin-bottom: 15px;
+  width:100%;
+  box-sizing: border-box;
+  outline:0;
+}
+
+.feedback-input:focus { border:2px solid #040404cc; }
+
+.feedback-select {
+    color:#676767;
+    font-family: Helvetica, Arial, sans-serif;
+    font-weight:500;
+    font-size: 18px;
+    border-radius: 5px;
+    line-height: 22px;
+    background-color: transparent;
+    border:2px solid #0a0a0a;
+    transition: all 0.3s;
+    padding: 13px;
+    margin-bottom: 15px;
+    width:100%;
+    box-sizing: border-box;
+    outline:0;
+  }
+
+.feedback-select:focus { border:2px solid #040404cc; }
+
+textarea {
+  height: 210px;
+  line-height: 150%;
+  resize:vertical;
+}
+
+[type="submit"] {
+  font-family: 'Montserrat', Arial, Helvetica, sans-serif;
+  width: 100%;
+  background:#020202cc;
+  border-radius:5px;
+  border:0;
+  cursor:pointer;
+  color:white;
+  font-size:24px;
+  padding-top:10px;
+  padding-bottom:10px;
+  transition: all 0.3s;
+  margin-top:-4px;
+  font-weight:700;
+}
+[type="submit"]:hover { background:#e9db1bcc;}
+
+/* ------------------------------------ お問い合わせページ------------------------------------ */
+
+
+
+.con_mainimg img{
+    /* border: 1px solid gold; */
+    width: 100%;
+    margin-bottom: 50px;
+    text-align: center;
+  
+
+}
+.con_content_ttl{
+    /* border: 1px solid fuchsia; */
+    width: 100%;
+    /* box-sizing: content-box; */
+    color: #fff;
+    z-index: 5;
+}
+
+.con_content_ttl .con_officettl h3{
+    /* border: 1px solid darkblue; */
+    width: 100%;
+    z-index: 30;
+    text-align: center;
+    padding-right: 6px;
+    /* font-size: 3.0vw; */
+    margin-top: -8px;
+    text-shadow:3px 3px 0 #1847b5;
+
+   
+}
+
+.con_stuff{
+    text-align: center;
+   
+}
+
+.con_content_ttl{
+    display: flex;
+    /* justify-content: space-around; */
+    /* margin-top: 150px; */
+    justify-content: center;
+    /* overflow: hidden; */
+}
+
+
+
+.con_content_wrap{
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+    margin-bottom: 100px;
+    
+
+}
+.con_officettl{
+    margin: 0 50px 0 50px ;
+    flex-shrink: 0;
+}
+
+
+.con_wrap_img{
+    margin-right: 50px;
+
+}
+.con_wrap_text{
+    margin-left: 20px;
+    line-height: 30px;
+}
+.con_wrap_text h3{
+    color:#ff0a0a
+}
+.con_wrap_text p{
+    color: #fff;
+}
+
+/* ----------------------------------------------------------------------------------- */
+
+
+/* レスポンシブ用 */
+/*********************************/
+/* 山本が記述　レスポンシブデザイン */
+/*********************************/
+@media screen and (max-width:786px) {
+
+    .top_catchcopy{margin:30px 0 60px 0;}
+        
+    .top_catchcopy .top_pc_catchcopy{
+        display:none;
+    }
+    .top_catchcopy .top_phone_catchcopy{
+        display:block;
+        color:#fff;
+        text-align:center;
+    }
+    
+    .top_pc_catchcopy_p{
+        display:none;
+    }
+    .top_phone_catchcopy_p{
+        display:block;
+        color:#fff;
+        text-align:center;
+    }
+    .top_catchcopy span{
+        color:#f25c78;
+        text-shadow: 0px 0px 15px #fff;
+      font-weight: bold;
+    }
+    .top_threephotos{
+        background-image:url(../img/top_backblack.jpg);
+        background-repeat:repeat-y;
+        background-size:100%;
+        background-position:center;
+        height:auto;
+        padding:0 0 70px 0;
+        background-attachment:fixed;
+    }
+    .top_threephotos img{
+        flex-direction:column;
+        width:100%;
+        height:auto;
+    }
+    
+    /* 展示内容 */
+    
+    .top_ExhibitDetails .top_title{
+        margin-bottom:8%;
+    }
+    .top_ExhibitDetails .top_title h3{
+        text-shadow:3px 3px 0 #1847b5;
+        text-align:center;
+    }
+    .top_ExhibitDetails .top_title p{text-align:center;}
+    
+    .top_ExhibitDetails .top_title a:link{text-decoration:none; color:#fff;}
+    .top_ExhibitDetails .top_title a:visited{text-decoration:none; color:#fff;}
+    .top_ExhibitDetails .top_title a:hover{text-decoration:none; color:#888;}
+    .top_ExhibitDetails .top_title a:active{text-decoration:none; color:#888;}
+    
+    .top_ExhibitDetails .top_box1{
+        display:flex;
+        justify-content:center;
+        margin-bottom:5.98%;
+        position:relative;
+        background-image:url(../img/top_Nebraska_numberplate.png), url(../img/top_indiana_numberplate.png);
+        background-repeat:no-repeat, no-repeat;
+        background-position:bottom left,bottom right;
+        background-attachment:fixed, fixed;
+        
+    }
+    /* ここ先生に聞く。左右のナンバーにマージンをかけると文字が動く。なにか方法はありませんか。 */
+    .top_ExhibitDetails .top_box1 .top_pbox2{
+        display:none;
+    }
+    .top_ExhibitDetails .top_box1 .top_pbox2 p{
+        display:none;
+    }
+    .top_ExhibitDetails .top_box1 .top_phone_pbox2{
+        display:block;
+        padding:0 40px 0 40px;
+    }
+    .top_ExhibitDetails .top_box1 .top_phone_pbox2 p{
+        display:block;
+        color:#fff;
+    }
+    .top_ExhibitDetails .top_box1 .top_phone_pbox2 span p{
+        text-align:center;
+    }
+    .top_ExhibitDetails .top_box1 .top_left{
+        display:none;
+        width:24.17%;
+        height:13.74%;
+        margin:15.27% 2.16% 0 0;
+    }
+    .top_ExhibitDetails .top_box1 .top_right{
+        display:none;
+        width:21.5%;
+        height:16.54%;
+        margin:6.36% 4.58% 2.16% 0;
+    }
+    .top_ExhibitDetails .top_btn{
+        margin:0 auto;
+        margin-bottom:85px;
+        position:relative;
+        width:228px;
+        height:73px;
+        overflow:hidden;
+        background:#000;
+    }
+    .top_ExhibitDetails .top_btn img{
+        width: 100%;
+        cursor: pointer;
+        transition-duration: 0.1s;
+    }
+    .top_ExhibitDetails .top_btn:hover img{
+        opacity: 0.6;
+        transition-duration: 0.1s;
+    }
+    
+    /* 開催概要 */
+    .top_ExhibitionOutline{
+        position:relative;
+        margin-bottom:40px;
+    }
+    .top_ExhibitionOutline .top_title2{
+        background-image:url(../img/top_yashinoki_ue.png);
+        background-repeat:no-repeat;
+        background-position-x:right;
+    }
+    .top_ExhibitionOutline .top_title2 h3{
+        text-shadow:3px 3px 0 #1847b5;
+        text-align:center;
+    }
+    .top_ExhibitionOutline .top_title2 p{
+        text-align:center;
+    }
+    
+    .top_ExhibitionOutline .top_title2 a:link{text-decoration:none; color:#fff;}
+    .top_ExhibitionOutline .top_title2 a:visited{text-decoration:none; color:#fff;}
+    .top_ExhibitionOutline .top_title2 a:hover{text-decoration:none; color:#888;}
+    .top_ExhibitionOutline .top_title2 a:active{text-decoration:none; color:#888;}
+    
+    .top_ExhibitionOutline .top_title2 .top_skybluecar1{
+        position:absolute;
+        z-index:20;
+        width:375px;
+        height:206px;
+        margin-left:850px;
+    }
+    /* 一部だけ黒が濃くなるのなんで */
+    .top_ExhibitionOutline .top_title2 .top_outline_btnbox4 .top_btn2{
+        margin:0 auto;
+        margin-bottom:85px;
+        position:relative;
+        width:228px;
+        height:73px;
+        overflow:hidden;
+        
+    }
+    .top_ExhibitionOutline .top_title2 .top_outline_btnbox4 .top_btn2 img{
+        width:262px;
+        height:73px;
+        cursor: pointer;
+        transition-duration: 0.1s;
+    }
+    .top_ExhibitionOutline .top_title2 .top_outline_btnbox4 .top_btn2:hover img{
+        opacity: 0.6;
+        transition-duration: 0.1s;
+    }
+    /* 黒ここまで */
+    /* CHECKボタン乗せたい */
+    .top_ExhibitionOutline .top_title2 .top_borderbox{
+        position:relative;
+        z-index:10;
+        width:100%;
+        height:auto;
+        margin:0 auto;
+        margin-top:180px;
+    }
+    .top_ExhibitionOutline .top_title2 .top_borderbox p{
+        position:relative;
+        text-align:center;
+        color:#333;
+        background-color:#fff;
+        border:5px solid #1847b5;
+        padding:60px;
+    }
+    .top_ExhibitionOutline .top_title2 .top_borderbox span{
+        color:#1847b5;
+    }
+    /* 美術館案内 */
+    .top_MuseumInformation .top_title3, .top_ContactUs .top_title4{
+        display:flex;
+        flex-direction:column;
+        align-items:center;
+        
+        /* 山本追記 */
+        margin-bottom:40px;
+    }
+    .top_MuseumInformation{
+        background-image:url(../img/top_skybluecar2.png);
+        background-repeat:no-repeat;
+        background-position:bottom center;
+        background-attachment:fixed;
+    }
+    .top_MuseumInformation .top_title3 h3{
+        text-shadow:3px 3px 0 #1847b5;
+        text-align:center;
+    }
+    .top_MuseumInformation .top_title3 p{text-align:center;}
+    
+    .top_MuseumInformation .top_title3 .top_title a:link{text-decoration:none; color:#fff;}
+    .top_MuseumInformation .top_title3 a:visited{text-decoration:none; color:#fff;}
+    .top_MuseumInformation .top_title3 a:hover{text-decoration:none; color:#888;}
+    .top_MuseumInformation .top_title3 a:active{text-decoration:none; color:#888;}
+    
+    .top_MuseumInformation .top_box3{
+        flex-direction:column;
+        justify-content:center;
+        align-items:center;
+        margin:0 0 50px 0;
+        position:relative;
+        height:370px;;
+    }
+    .top_MuseumInformation .top_box3 .top_musephoto{
+        margin:0 31px 50px 0;
+        position:relative;
+    }
+    .top_MuseumInformation .top_box3 .top_skybluecar3{
+        display:none;
+        position:absolute;
+        z-index:10;
+        margin: 200px 900px 0 0;
+    }
+    .top_MuseumInformation .top_box3 .top_btn3{
+        width:376px;
+        height:73px;
+        overflow:hidden;
+        background:#000;
+    }
+    .top_MuseumInformation .top_box3 .top_btn3 img{
+        width: 100%;
+        cursor: pointer;
+        transition-duration: 0.1s;
+    }
+    .top_MuseumInformation .top_box3 .top_btn3:hover img{
+        opacity: 0.6;
+        transition-duration: 0.1s;
+    }
+    
+    /* お問い合わせ */
+    .top_ContactUs{
+        background-image:url(../img/top_yashinoki_shita.png);
+        background-position-x:85%;
+        background-repeat:no-repeat;
+        height:320px;
+    }
+    .top_ContactUs .top_title4 h3{
+        text-shadow:3px 3px 0 #1847b5;
+        text-align:center;
+    }
+    .top_ContactUs .top_title4 p{text-align:center;}
+    
+    .top_ContactUs .top_title4 .top_title a:link{text-decoration:none; color:#fff;}
+    .top_ContactUs .top_title4 a:visited{text-decoration:none; color:#fff;}
+    .top_ContactUs .top_title4 a:hover{text-decoration:none; color:#888;}
+    .top_ContactUs .top_title4 a:active{text-decoration:none; color:#888;}
+    
+    .top_ContactUs .top_btn4{
+        margin:0 auto;
+        width:376px;
+        height:73px;
+        overflow:hidden;
+        background:#000;
+    }
+    .top_ContactUs .top_btn4 img{
+        width: 100%;
+        cursor: pointer;
+        transition-duration: 0.1s;
+    }
+    .top_ContactUs .top_btn4:hover img{
+        opacity: 0.6;
+        transition-duration: 0.1s;
+    }
+}
+    /****************************/
+    /* 山本コーディング　ここまで */
+    /****************************/
+    
+    
+    /*赤羽レスポンシブここから -----------------------------------------------------------------------------------*/
+
+@media only screen and (max-width:768px){
+
+    .out_h2{
+       margin: 70px 10px 0 30px;
+        white-space: nowrap;
+    }
+
+    .out_box{
+    display:block;
+    justify-content:space-between;
+    }
+
+    .out_img1{
+        margin: 70px 0 70px 70px;
+    }
+
+    .out_textbox{
+        padding: 0 15% 0 0;
+        box-sizing:border-box;
+    }
+
+    }
+
+    /*赤羽　レスポンシブ*/
+@media only screen and (max-width:768px){
+
+    .det_h3{
+        padding: 1%;
+    }
+    
+    .det_h3_p{
+        color:#ffffff;
+    }
+    
+    .det_text1{
+            padding: 10%;
+            margin: 10%;
+    }
+
+    .det_content p{
+        font-size: 10px;
+        white-space: nowrap
+    }   
+    
+    .det_content_img1{
+        position: relative;
+    }
+    .det_content_img4 p{
+        position: relative;
+    }
+    .det_contentA{
+        font-size:100%;
+    }
+    .det_contentB{
+        font-size:16px;
+    }
+    
+}
+
+
+    /* ------------------------------------------ 美術館案内ページ　レスポンシブ------------------------------------------ */
+
+
+
+/* レスポンシブ */
+@media only screen and (max-width:768px){
+    img{max-width: 100%; height: auto;
+    }
+    #wrapper{
+        width: 100%;
+    }
+
+
+
+
+
+
+
+    
+.mus_top{
+    /* border: 1px solid fuchsia; */ 
+    position: initial;
+    
+   
+    
+}
+
+.mus_logo{
+    max-width: 100%;
+    margin: auto;
+
+}
+
+
+.mus_main{
+   position: initial;
+
+}
+
+
+    .mus_en{
+        background-image: url(../img/mus_side.png);
+        background-repeat: no-repeat;
+        background-size: contain;
+        height: 120px;
+        margin: auto;
+  
+    }
+    .mus_ttl {
+        /* border: 1px solid goldenrod; */
+        width: 80%;
+        
+    }
+    
+
+  
+    .mus_main_wrap{
+        width: 100%;
+        display: block;
+        padding: 0%;
+        justify-content: center;
+        
+    }
+
+    .mus_text p{
+        font-size: 1.7vw;
+        
+    }
+   
+    .mus_contents_wrap{
+        display: block;
+        text-align: center;
+        
+    }
+
+    .mus_contents_wrap01,
+    .mus_contents_wrap02,
+    .mus_contents_wrap03{
+        margin-bottom: 40px;
+    }
+
+
+    .mus_btn{
+        margin-top:-1px;
+        text-align:center;
+    }
+    .mus_contents02_wrap{
+        /* border: 1px solid forestgreen; */
+        display: block;
+        text-align: center;
+        
+    }
+    .mus_contents02_wrap p{
+        /* border: 1px solid gold; */
+        text-align: center;
+        font-size: 1.7vw; 
+
+    }
+    
+    }
+
+
+/* ------------------------------------------ 美術館案内ページ　レスポンシブ------------------------------------------ */
+    
+
+    /* レスポンシブ */
+@media only screen and (max-width:390px){
+    img{max-width: 100%; height: auto;
+    }
+    #wrapper{
+        width: 100%;
+    }
+
+
+
+    .mus_logo{
+        width: 17%;
+    }
+    .mus_en{
+        height: 70px;
+       
+    }
+    .mus_main_wrap{
+        width: 100%;
+        margin: auto;
+       text-align: center;
+       margin-top: -10px;
+    }
+
+    .mus_main_wrap .mus_text {
+        margin: auto;
+    }
+
+    .mus_main_wrap .mus_text p{
+        line-height: 40px;
+       
+    }
+    .mus_ttl h2{ 
+        /* border: 5px solid green; */
+        font-size: 18px;
+        padding-top: 17%;
+        
+       
+    }
+    .mus_text p{
+        /* line-height: normal; */
+        text-align: left;
+        width: 100%;
+        margin: auto;
+        padding: 2%;
+        text-align: center;
+    
+    }
+
+
+   
+    .mus_contents02_wrap01{
+        margin: auto;
+        width: 70%;
+        padding-bottom: 10%;
+        
+    }
+    .mus_contents02_wrap .mus_contents02_wrap02{
+        margin: auto;
+        width: 70%;
+        
+    }
+
+    span{
+    display: block;
+    }
+    form{
+        max-width: 70%;
+        
+    }
+   
+
+}
+
+/* ------------------------------------------ お問合せページ　レスポンシブ------------------------------------------ */
+
+ /* レスポンシブ */
+ @media only screen and (max-width:768px){
+    img{max-width: 100%; height: auto;
+    }
+    #wrapper{
+        width: 100%;
+    
+
+    }
+    .con_content_wrap .con_wrap_img{
+        /* border: 5px  solid forestgreen; */
+        width: 40%;
+    }
+
+
+}
+
+
+/* ------------------------------------------ お問合せページ　レスポンシブ------------------------------------------ */
+
+ /* レスポンシブ */
+ @media only screen and (max-width:390px){
+    img{max-width: 100%; height: auto;
+    }
+    #wrapper{
+        width: 100%;
+   
+    }
+   
+   
+    
+    .con_officettl h3{
+        font-size: 7vw;
+    }
+    .con_content_wrap{
+        /* border: 1px solid goldenrod; */
+        display: block;
+        width: 100%;
+        justify-content: center;
+        text-align: center;
+    }
+    .con_content_wrap .con_wrap_img{
+        /* border: 5px  solid forestgreen; */
+        width: 60%;
+        margin: auto;
+   
+    }
+    .con_wrap_text{
+        padding-top: 10%;
+
+    }
+    .con_wrap_text h3{
+        font-size:7vw;
+
+    }
+    .con_wrap_text p{
+        font-size:2.8vw;
+        line-height: 200%;
+
+    }
+    .con_content_wrap{
+        margin: auto;
+        padding: 10% 0 10% 0;
+    }
+
+
+}
